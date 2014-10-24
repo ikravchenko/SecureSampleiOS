@@ -1,25 +1,47 @@
-//
-//  ViewController.swift
-//  encryption
-//
-//  Created by Ivan Kravchenko on 17/10/14.
-//  Copyright (c) 2014 DORMA. All rights reserved.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
+let ServiceName = "MyService"
 
+class ViewController: UIViewController, UIAlertViewDelegate {
+  
+  @IBOutlet var usernameField : UITextField!
+  @IBOutlet var passwordField : UITextField!
+  
+  @IBAction func login(AnyObject) {
+    if usernameField.text.isEmpty || passwordField.text.isEmpty {
+      UIAlertView(title: "Error", message: "Username or password is epmty", delegate: nil, cancelButtonTitle: "Ok").show()
+      return
+    }
+
+    if let password = SSKeychain.passwordForService(ServiceName, account: usernameField.text) {
+      if password == passwordField.text {
+        performSegueWithIdentifier("showPhotos", sender: self)
+      } else {
+        UIAlertView(title: "Error", message: "Password or username is incorrect",  delegate: nil, cancelButtonTitle: "Ok").show()
+      }
+    } else {
+      UIAlertView(title: "Add account", message: "Do you want to register?", delegate: self, cancelButtonTitle: "No", otherButtonTitles: "Yes").show()
+    }
+  }
+  
+  func alertView(alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int) {
+    if buttonIndex == 1 {
+      var result = SSKeychain.setPassword(passwordField.text, forService: ServiceName, account: self.usernameField.text)
+      if result {
+        performSegueWithIdentifier("showPhotos", sender: self)
+      }
+    }
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    super.prepareForSegue(segue, sender: sender)
+    (segue.destinationViewController as PhotosViewController).username = self.usernameField.text
+    self.passwordField.text = nil
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    (UIApplication.sharedApplication().delegate as AppDelegate).navigationController = navigationController
   }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
-
 }
 

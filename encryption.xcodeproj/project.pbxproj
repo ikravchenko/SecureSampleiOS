@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7334212B367427E89A8407A /* libPods-encryption.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E519699B5AD4F00B33B5E94 /* libPods-encryption.a */; };
+		CD0EDC2419F9103E00020B4F /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0EDC2319F9103E00020B4F /* PhotosViewController.swift */; };
+		CD0EDC2619F9108500020B4F /* PhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0EDC2519F9108500020B4F /* PhotoViewCell.swift */; };
+		CD40DB1B19FA8C5D00845F01 /* CypherHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD40DB1A19FA8C5D00845F01 /* CypherHelper.m */; };
 		CD9DA29019F0FA4A00E81DB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9DA28F19F0FA4A00E81DB2 /* AppDelegate.swift */; };
 		CD9DA29219F0FA4A00E81DB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9DA29119F0FA4A00E81DB2 /* ViewController.swift */; };
 		CD9DA29519F0FA4A00E81DB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9DA29319F0FA4A00E81DB2 /* Main.storyboard */; };
 		CD9DA29719F0FA4A00E81DB2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9DA29619F0FA4A00E81DB2 /* Images.xcassets */; };
 		CD9DA29A19F0FA4A00E81DB2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9DA29819F0FA4A00E81DB2 /* LaunchScreen.xib */; };
 		CD9DA2A619F0FA4A00E81DB2 /* encryptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9DA2A519F0FA4A00E81DB2 /* encryptionTests.swift */; };
+		CDF26DDF19F8FAEF00E42808 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF26DDE19F8FAEF00E42808 /* Security.framework */; };
+		CDF26DE019F8FAF600E42808 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF26DDE19F8FAEF00E42808 /* Security.framework */; };
+		CDF26DE319F909E600E42808 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF26DE219F909E600E42808 /* MobileCoreServices.framework */; };
+		CDF26DE419F909F000E42808 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF26DE219F909E600E42808 /* MobileCoreServices.framework */; };
+		D10E30D619004CA18129DEC9 /* libPods-encryptionTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6A52FC486347389B1E9863 /* libPods-encryptionTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +35,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E519699B5AD4F00B33B5E94 /* libPods-encryption.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-encryption.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		999EBF5914A847D686EAD1C0 /* Pods-encryptionTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encryptionTests.xcconfig"; path = "Pods/Pods-encryptionTests.xcconfig"; sourceTree = "<group>"; };
+		AF6A52FC486347389B1E9863 /* libPods-encryptionTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-encryptionTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0EDC2319F9103E00020B4F /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		CD0EDC2519F9108500020B4F /* PhotoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewCell.swift; sourceTree = "<group>"; };
+		CD0EDC2819F926BD00020B4F /* Sec-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sec-Bridging-Header.h"; sourceTree = "<group>"; };
+		CD40DB1A19FA8C5D00845F01 /* CypherHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CypherHelper.m; sourceTree = "<group>"; };
+		CD40DB1C19FA8C7900845F01 /* CypherHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CypherHelper.h; sourceTree = "<group>"; };
 		CD9DA28A19F0FA4A00E81DB2 /* encryption.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = encryption.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9DA28E19F0FA4A00E81DB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD9DA28F19F0FA4A00E81DB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +53,9 @@
 		CD9DA29F19F0FA4A00E81DB2 /* encryptionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = encryptionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9DA2A419F0FA4A00E81DB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD9DA2A519F0FA4A00E81DB2 /* encryptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = encryptionTests.swift; sourceTree = "<group>"; };
+		CDF26DDE19F8FAEF00E42808 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CDF26DE219F909E600E42808 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E48E4E87E49C494B9A4B44D9 /* Pods-encryption.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encryption.xcconfig"; path = "Pods/Pods-encryption.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +63,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF26DE319F909E600E42808 /* MobileCoreServices.framework in Frameworks */,
+				CDF26DE019F8FAF600E42808 /* Security.framework in Frameworks */,
+				B7334212B367427E89A8407A /* libPods-encryption.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +73,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF26DE419F909F000E42808 /* MobileCoreServices.framework in Frameworks */,
+				CDF26DDF19F8FAEF00E42808 /* Security.framework in Frameworks */,
+				D10E30D619004CA18129DEC9 /* libPods-encryptionTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		094D36A85CB34B519513ACC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E519699B5AD4F00B33B5E94 /* libPods-encryption.a */,
+				AF6A52FC486347389B1E9863 /* libPods-encryptionTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD9DA28119F0FA4A00E81DB2 = {
 			isa = PBXGroup;
 			children = (
+				CD0EDC2819F926BD00020B4F /* Sec-Bridging-Header.h */,
+				CDF26DE219F909E600E42808 /* MobileCoreServices.framework */,
+				CDF26DDE19F8FAEF00E42808 /* Security.framework */,
 				CD9DA28C19F0FA4A00E81DB2 /* encryption */,
 				CD9DA2A219F0FA4A00E81DB2 /* encryptionTests */,
 				CD9DA28B19F0FA4A00E81DB2 /* Products */,
+				E48E4E87E49C494B9A4B44D9 /* Pods-encryption.xcconfig */,
+				094D36A85CB34B519513ACC7 /* Frameworks */,
+				999EBF5914A847D686EAD1C0 /* Pods-encryptionTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +124,10 @@
 				CD9DA29619F0FA4A00E81DB2 /* Images.xcassets */,
 				CD9DA29819F0FA4A00E81DB2 /* LaunchScreen.xib */,
 				CD9DA28D19F0FA4A00E81DB2 /* Supporting Files */,
+				CD0EDC2319F9103E00020B4F /* PhotosViewController.swift */,
+				CD0EDC2519F9108500020B4F /* PhotoViewCell.swift */,
+				CD40DB1A19FA8C5D00845F01 /* CypherHelper.m */,
+				CD40DB1C19FA8C7900845F01 /* CypherHelper.h */,
 			);
 			path = encryption;
 			sourceTree = "<group>";
@@ -119,9 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD9DA2A919F0FA4A00E81DB2 /* Build configuration list for PBXNativeTarget "encryption" */;
 			buildPhases = (
+				476C7A1CD02246609AF1168C /* Check Pods Manifest.lock */,
 				CD9DA28619F0FA4A00E81DB2 /* Sources */,
 				CD9DA28719F0FA4A00E81DB2 /* Frameworks */,
 				CD9DA28819F0FA4A00E81DB2 /* Resources */,
+				FDDEBF9E969E479B98CE3FDF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD9DA2AC19F0FA4A00E81DB2 /* Build configuration list for PBXNativeTarget "encryptionTests" */;
 			buildPhases = (
+				F09BEDE52E0E45368093706D /* Check Pods Manifest.lock */,
 				CD9DA29B19F0FA4A00E81DB2 /* Sources */,
 				CD9DA29C19F0FA4A00E81DB2 /* Frameworks */,
 				CD9DA29D19F0FA4A00E81DB2 /* Resources */,
+				55E9346F580344DF91E2CA7D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,13 +256,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		476C7A1CD02246609AF1168C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		55E9346F580344DF91E2CA7D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-encryptionTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F09BEDE52E0E45368093706D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FDDEBF9E969E479B98CE3FDF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-encryption-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CD9DA28619F0FA4A00E81DB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD0EDC2419F9103E00020B4F /* PhotosViewController.swift in Sources */,
 				CD9DA29219F0FA4A00E81DB2 /* ViewController.swift in Sources */,
 				CD9DA29019F0FA4A00E81DB2 /* AppDelegate.swift in Sources */,
+				CD0EDC2619F9108500020B4F /* PhotoViewCell.swift in Sources */,
+				CD40DB1B19FA8C5D00845F01 /* CypherHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +408,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sec-Briding-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -329,6 +445,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sec-Briding-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -336,26 +453,33 @@
 		};
 		CD9DA2AA19F0FA4A00E81DB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E48E4E87E49C494B9A4B44D9 /* Pods-encryption.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = encryption/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sec-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		CD9DA2AB19F0FA4A00E81DB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E48E4E87E49C494B9A4B44D9 /* Pods-encryption.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = encryption/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sec-Bridging-Header.h";
 			};
 			name = Release;
 		};
 		CD9DA2AD19F0FA4A00E81DB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 999EBF5914A847D686EAD1C0 /* Pods-encryptionTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -369,12 +493,14 @@
 				INFOPLIST_FILE = encryptionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sec-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/encryption.app/encryption";
 			};
 			name = Debug;
 		};
 		CD9DA2AE19F0FA4A00E81DB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 999EBF5914A847D686EAD1C0 /* Pods-encryptionTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -384,6 +510,7 @@
 				INFOPLIST_FILE = encryptionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sec-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/encryption.app/encryption";
 			};
 			name = Release;
@@ -407,6 +534,7 @@
 				CD9DA2AB19F0FA4A00E81DB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD9DA2AC19F0FA4A00E81DB2 /* Build configuration list for PBXNativeTarget "encryptionTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +543,7 @@
 				CD9DA2AE19F0FA4A00E81DB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
