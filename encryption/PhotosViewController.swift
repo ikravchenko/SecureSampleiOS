@@ -1,7 +1,8 @@
 import UIKit
 import MobileCoreServices
+import MessageUI
 
-class PhotosViewController: UICollectionViewController, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PhotosViewController: UICollectionViewController, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
   var username : String!
   var photos : [UIImage] = [UIImage]()
   lazy var filePath : String = {
@@ -42,7 +43,7 @@ class PhotosViewController: UICollectionViewController, UIActionSheetDelegate, U
     var image: UIImage = info[UIImagePickerControllerEditedImage] as? UIImage ?? info[UIImagePickerControllerOriginalImage] as UIImage
     var data =  UIImagePNGRepresentation(image)
     var name : String = "image-\(photos.count + 1).securedData"
-    var encrypted = CypherHelper.encryptData(data, password: "pswd")
+    var encrypted = CypherHelper.encryptData(data, password: SSKeychain.passwordForService(ServiceName, account: username))
     encrypted.writeToFile(filePath.stringByAppendingPathComponent(name), atomically: true)
     photos.append(image)
     collectionView?.reloadData()
@@ -61,7 +62,7 @@ class PhotosViewController: UICollectionViewController, UIActionSheetDelegate, U
     for f in contents {
       if f.hasSuffix(".securedData") {
         var data = NSData.dataWithContentsOfFile(filePath.stringByAppendingPathComponent(f), options: .DataReadingMappedIfSafe, error: nil)
-        var decryptedData = CypherHelper.decryptData(data, password: "pswd")
+        var decryptedData = CypherHelper.decryptData(data, password: SSKeychain.passwordForService(ServiceName, account: username))
         self.photos.append(UIImage(data: decryptedData))
       } else {
         println("File is not secured")
@@ -77,5 +78,20 @@ class PhotosViewController: UICollectionViewController, UIActionSheetDelegate, U
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier("photo_cell", forIndexPath: indexPath) as PhotoViewCell
     cell.imageView.image = photos[indexPath.row]
     return cell
+  }
+  
+  override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    let photo = photos[indexPath.row]
+    var mailController = MFMailComposeViewController()
+    mailController.mailComposeDelegate = self
+    mailController.setSubject("Photo")
+    mailController.setMessageBody("Please find a photo attached", isHTML: false)
+    mailController.setToRecipients(["ivan.kravchenko@dorma.com"])
+    mailController.addAttachmentData(UIImagePNGRepresentation(photo), mimeType: "image/png", fileName: filePath.stringByAppendingPathComponent("image-\(indexPath.row).securedData"))
+    presentViewController(mailController, animated: true, completion: nil)
+  }
+  
+  func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+    dismissViewControllerAnimated(true, completion: nil)
   }
 }

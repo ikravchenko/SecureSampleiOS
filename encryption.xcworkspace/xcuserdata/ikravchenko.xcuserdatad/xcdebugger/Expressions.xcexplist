@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "encryptionTests.encryptionTests.testAES128Base64 (encryptionTests.encryptionTests)() -&gt; ():encryptionTests.swift">
+      </ContextState>
+      <ContextState
+         contextName = "encryptionTests.encryptionTests.testExample (encryptionTests.encryptionTests)() -&gt; ():encryptionTests.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
