@@ -17,5 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationWillResignActive(application: UIApplication) {
     navigationController?.popToRootViewControllerAnimated(false)
   }
+  
+  func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+    println("URL received:\(url)")
+    UIAlertView(title: "File received", message: "URL: \(url)", delegate: nil, cancelButtonTitle: "OK").show()
+    return true
+  }
 }
 

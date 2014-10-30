@@ -1,0 +1,1 @@
+PODS_ENCRYPTION_RNCRYPTOR_OTHER_LDFLAGS = -framework "Security"

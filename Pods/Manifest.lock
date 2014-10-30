@@ -1,13 +1,16 @@
 PODS:
   - RNCryptor (2.2)
   - SSKeychain (1.2.2)
+  - SSZipArchive (0.3.2)
 
 DEPENDENCIES:
   - RNCryptor
   - SSKeychain
+  - SSZipArchive
 
 SPEC CHECKSUMS:
   RNCryptor: 4f562062c39f288b99601674f2c50dd44b68d58a
   SSKeychain: cc48bd3ad24fcd9125adb9e0d23dd50b8bbd08b9
+  SSZipArchive: 11299a4e89821bd4085b12f25edaa85853e0051c
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.34.4

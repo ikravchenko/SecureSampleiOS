@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-encryption-SSZipArchive.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-encryption.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-encryptionTests-SSZipArchive.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-encryptionTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1D9A40DBA5A946E59C2B33CB</key>
+		<key>4641A64B1C9467F2FD7B908E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4D4F83E6078A453494942926</key>
+		<key>6ECF7DF5F63AD2CD2ED9A553</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>811D6E2EE7FD43E4A44B4FBD</key>
+		<key>7DB7CFD91B938A46FB7EBC5A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8335D556066B4C4A92497B79</key>
+		<key>AFE97AF6B66BD34D24692B4B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9C54A41131DA4671A54A0317</key>
+		<key>C2BBF9FA616510F0FA521AFE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C902F785AEDA4B3C94FB07EC</key>
+		<key>CA458B524AA203F59205C081</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA9EB624D868DDD6168DB07B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF4DE20C5046A903F8258D37</key>
 		<dict>
 			<key>primary</key>
 			<true/>
