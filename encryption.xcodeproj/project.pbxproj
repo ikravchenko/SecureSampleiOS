@@ -10,6 +10,12 @@
 		B7334212B367427E89A8407A /* libPods-encryption.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E519699B5AD4F00B33B5E94 /* libPods-encryption.a */; };
 		CD0EDC2419F9103E00020B4F /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0EDC2319F9103E00020B4F /* PhotosViewController.swift */; };
 		CD0EDC2619F9108500020B4F /* PhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0EDC2519F9108500020B4F /* PhotoViewCell.swift */; };
+		CD271EFC1A078C31003821CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9DA28F19F0FA4A00E81DB2 /* AppDelegate.swift */; };
+		CD271EFD1A078C31003821CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9DA29119F0FA4A00E81DB2 /* ViewController.swift */; };
+		CD271EFE1A078C31003821CA /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0EDC2319F9103E00020B4F /* PhotosViewController.swift */; };
+		CD271EFF1A078C31003821CA /* PhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0EDC2519F9108500020B4F /* PhotoViewCell.swift */; };
+		CD271F001A078C31003821CA /* CypherHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD40DB1A19FA8C5D00845F01 /* CypherHelper.m */; };
+		CD271F011A078C31003821CA /* CypherHelper.h in Sources */ = {isa = PBXBuildFile; fileRef = CD40DB1C19FA8C7900845F01 /* CypherHelper.h */; };
 		CD40DB1B19FA8C5D00845F01 /* CypherHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD40DB1A19FA8C5D00845F01 /* CypherHelper.m */; };
 		CD9DA29019F0FA4A00E81DB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9DA28F19F0FA4A00E81DB2 /* AppDelegate.swift */; };
 		CD9DA29219F0FA4A00E81DB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9DA29119F0FA4A00E81DB2 /* ViewController.swift */; };
@@ -17,9 +23,6 @@
 		CD9DA29719F0FA4A00E81DB2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9DA29619F0FA4A00E81DB2 /* Images.xcassets */; };
 		CD9DA29A19F0FA4A00E81DB2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9DA29819F0FA4A00E81DB2 /* LaunchScreen.xib */; };
 		CD9DA2A619F0FA4A00E81DB2 /* encryptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9DA2A519F0FA4A00E81DB2 /* encryptionTests.swift */; };
-		CDA6E82D1A0145F3005C7F3D /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA6E82C1A0145F3005C7F3D /* ShareViewController.swift */; };
-		CDA6E82F1A0145F3005C7F3D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA6E82E1A0145F3005C7F3D /* MainInterface.storyboard */; };
-		CDA6E8321A0145F3005C7F3D /* import.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CDA6E8281A0145F2005C7F3D /* import.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CDF26DDF19F8FAEF00E42808 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF26DDE19F8FAEF00E42808 /* Security.framework */; };
 		CDF26DE019F8FAF600E42808 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF26DDE19F8FAEF00E42808 /* Security.framework */; };
 		CDF26DE319F909E600E42808 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF26DE219F909E600E42808 /* MobileCoreServices.framework */; };
@@ -35,20 +38,6 @@
 			remoteGlobalIDString = CD9DA28919F0FA4A00E81DB2;
 			remoteInfo = encryption;
 		};
-		CDA6E8301A0145F3005C7F3D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD9DA28219F0FA4A00E81DB2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CDA6E8271A0145F2005C7F3D;
-			remoteInfo = import;
-		};
-		CDA6E8331A0145F3005C7F3D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD9DA28219F0FA4A00E81DB2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CDA6E8271A0145F2005C7F3D;
-			remoteInfo = import;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,7 +47,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				CDA6E8321A0145F3005C7F3D /* import.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,7 +64,6 @@
 		CD0EDC2819F926BD00020B4F /* Sec-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sec-Bridging-Header.h"; sourceTree = "<group>"; };
 		CD40DB1A19FA8C5D00845F01 /* CypherHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CypherHelper.m; sourceTree = "<group>"; };
 		CD40DB1C19FA8C7900845F01 /* CypherHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CypherHelper.h; sourceTree = "<group>"; };
-		CD93DE5F1A02689000F919CB /* import.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = import.entitlements; sourceTree = "<group>"; };
 		CD9DA28A19F0FA4A00E81DB2 /* encryption.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = encryption.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9DA28E19F0FA4A00E81DB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD9DA28F19F0FA4A00E81DB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,10 +74,6 @@
 		CD9DA29F19F0FA4A00E81DB2 /* encryptionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = encryptionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9DA2A419F0FA4A00E81DB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD9DA2A519F0FA4A00E81DB2 /* encryptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = encryptionTests.swift; sourceTree = "<group>"; };
-		CDA6E8281A0145F2005C7F3D /* import.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = import.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDA6E82B1A0145F3005C7F3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDA6E82C1A0145F3005C7F3D /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
-		CDA6E82E1A0145F3005C7F3D /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		CDF26DDE19F8FAEF00E42808 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CDF26DE219F909E600E42808 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D71FA1378D00AF045754CADC /* Pods-encryptionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encryptionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-encryptionTests/Pods-encryptionTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,13 +97,6 @@
 				CDF26DE419F909F000E42808 /* MobileCoreServices.framework in Frameworks */,
 				CDF26DDF19F8FAEF00E42808 /* Security.framework in Frameworks */,
 				D10E30D619004CA18129DEC9 /* libPods-encryptionTests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CDA6E8251A0145F2005C7F3D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +131,6 @@
 				CDF26DDE19F8FAEF00E42808 /* Security.framework */,
 				CD9DA28C19F0FA4A00E81DB2 /* encryption */,
 				CD9DA2A219F0FA4A00E81DB2 /* encryptionTests */,
-				CDA6E8291A0145F3005C7F3D /* import */,
 				CD9DA28B19F0FA4A00E81DB2 /* Products */,
 				094D36A85CB34B519513ACC7 /* Frameworks */,
 				CB072A51C48A65720C20C8F2 /* Pods */,
@@ -167,7 +142,6 @@
 			children = (
 				CD9DA28A19F0FA4A00E81DB2 /* encryption.app */,
 				CD9DA29F19F0FA4A00E81DB2 /* encryptionTests.xctest */,
-				CDA6E8281A0145F2005C7F3D /* import.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -214,25 +188,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CDA6E8291A0145F3005C7F3D /* import */ = {
-			isa = PBXGroup;
-			children = (
-				CD93DE5F1A02689000F919CB /* import.entitlements */,
-				CDA6E82C1A0145F3005C7F3D /* ShareViewController.swift */,
-				CDA6E82E1A0145F3005C7F3D /* MainInterface.storyboard */,
-				CDA6E82A1A0145F3005C7F3D /* Supporting Files */,
-			);
-			path = import;
-			sourceTree = "<group>";
-		};
-		CDA6E82A1A0145F3005C7F3D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CDA6E82B1A0145F3005C7F3D /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -250,8 +205,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				CDA6E8311A0145F3005C7F3D /* PBXTargetDependency */,
-				CDA6E8341A0145F3005C7F3D /* PBXTargetDependency */,
 			);
 			name = encryption;
 			productName = encryption;
@@ -278,23 +231,6 @@
 			productReference = CD9DA29F19F0FA4A00E81DB2 /* encryptionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CDA6E8271A0145F2005C7F3D /* import */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CDA6E8371A0145F3005C7F3D /* Build configuration list for PBXNativeTarget "import" */;
-			buildPhases = (
-				CDA6E8241A0145F2005C7F3D /* Sources */,
-				CDA6E8251A0145F2005C7F3D /* Frameworks */,
-				CDA6E8261A0145F2005C7F3D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = import;
-			productName = import;
-			productReference = CDA6E8281A0145F2005C7F3D /* import.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -306,19 +242,16 @@
 				TargetAttributes = {
 					CD9DA28919F0FA4A00E81DB2 = {
 						CreatedOnToolsVersion = 6.0;
-					};
-					CD9DA29E19F0FA4A00E81DB2 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = CD9DA28919F0FA4A00E81DB2;
-					};
-					CDA6E8271A0145F2005C7F3D = {
-						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = BZT89T2UB8;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
 							};
 						};
+					};
+					CD9DA29E19F0FA4A00E81DB2 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = CD9DA28919F0FA4A00E81DB2;
 					};
 				};
 			};
@@ -337,7 +270,6 @@
 			targets = (
 				CD9DA28919F0FA4A00E81DB2 /* encryption */,
 				CD9DA29E19F0FA4A00E81DB2 /* encryptionTests */,
-				CDA6E8271A0145F2005C7F3D /* import */,
 			);
 		};
 /* End PBXProject section */
@@ -357,14 +289,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CDA6E8261A0145F2005C7F3D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CDA6E82F1A0145F3005C7F3D /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,15 +374,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD271EFC1A078C31003821CA /* AppDelegate.swift in Sources */,
+				CD271EFD1A078C31003821CA /* ViewController.swift in Sources */,
+				CD271EFE1A078C31003821CA /* PhotosViewController.swift in Sources */,
+				CD271EFF1A078C31003821CA /* PhotoViewCell.swift in Sources */,
+				CD271F001A078C31003821CA /* CypherHelper.m in Sources */,
+				CD271F011A078C31003821CA /* CypherHelper.h in Sources */,
 				CD9DA2A619F0FA4A00E81DB2 /* encryptionTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CDA6E8241A0145F2005C7F3D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CDA6E82D1A0145F3005C7F3D /* ShareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,16 +391,6 @@
 			isa = PBXTargetDependency;
 			target = CD9DA28919F0FA4A00E81DB2 /* encryption */;
 			targetProxy = CD9DA2A019F0FA4A00E81DB2 /* PBXContainerItemProxy */;
-		};
-		CDA6E8311A0145F3005C7F3D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CDA6E8271A0145F2005C7F3D /* import */;
-			targetProxy = CDA6E8301A0145F3005C7F3D /* PBXContainerItemProxy */;
-		};
-		CDA6E8341A0145F3005C7F3D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CDA6E8271A0145F2005C7F3D /* import */;
-			targetProxy = CDA6E8331A0145F3005C7F3D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -588,10 +500,14 @@
 			baseConfigurationReference = A68225384755157578D79D33 /* Pods-encryption.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = encryption/encryption.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = encryption/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sec-Bridging-Header.h";
 			};
 			name = Debug;
@@ -601,10 +517,14 @@
 			baseConfigurationReference = ACA67965BA707E2DE5785ACC /* Pods-encryption.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = encryption/encryption.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = encryption/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sec-Bridging-Header.h";
 			};
 			name = Release;
@@ -647,40 +567,6 @@
 			};
 			name = Release;
 		};
-		CDA6E8351A0145F3005C7F3D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = import/import.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = import/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
-			};
-			name = Debug;
-		};
-		CDA6E8361A0145F3005C7F3D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = import/import.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = import/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -707,15 +593,6 @@
 			buildConfigurations = (
 				CD9DA2AD19F0FA4A00E81DB2 /* Debug */,
 				CD9DA2AE19F0FA4A00E81DB2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CDA6E8371A0145F3005C7F3D /* Build configuration list for PBXNativeTarget "import" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CDA6E8351A0145F3005C7F3D /* Debug */,
-				CDA6E8361A0145F3005C7F3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

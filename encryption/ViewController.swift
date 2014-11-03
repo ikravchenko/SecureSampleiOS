@@ -42,10 +42,6 @@ class ViewController: UIViewController, UIAlertViewDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     (UIApplication.sharedApplication().delegate as AppDelegate).navigationController = navigationController
-    var path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-    let files = NSFileManager.defaultManager().contentsOfDirectoryAtPath(path, error: nil)
-    
-    println("Files:\(files)")
   }
 }
 

@@ -46,7 +46,7 @@ class PhotosViewController: UICollectionViewController, UIActionSheetDelegate, U
     var encrypted = CypherHelper.encryptData(data, password: SSKeychain.passwordForService(ServiceName, account: username))
     encrypted.writeToFile(filePath.stringByAppendingPathComponent(name), atomically: true)
     photos.append(image)
-    collectionView?.reloadData()
+    collectionView.reloadData()
     picker.dismissViewControllerAnimated(true, completion: nil)
   }
   
@@ -61,9 +61,9 @@ class PhotosViewController: UICollectionViewController, UIActionSheetDelegate, U
     var contents = fileManager.contentsOfDirectoryAtPath(filePath, error: &error) as [String]
     for f in contents {
       if f.hasSuffix(".securedData") {
-        var data = NSData.dataWithContentsOfFile(filePath.stringByAppendingPathComponent(f), options: .DataReadingMappedIfSafe, error: nil)
+        var data = NSData(contentsOfFile: filePath.stringByAppendingPathComponent(f), options: .DataReadingMappedIfSafe, error: nil)
         var decryptedData = CypherHelper.decryptData(data, password: SSKeychain.passwordForService(ServiceName, account: username))
-        self.photos.append(UIImage(data: decryptedData))
+        self.photos.append(UIImage(data: decryptedData)!)
       } else {
         println("File is not secured")
       }

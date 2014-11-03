@@ -43,15 +43,39 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>CFBundleURLTypes</key>
+	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleURLSchemes</key>
+			<key>CFBundleTypeName</key>
+			<string>Air Configuration</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSItemContentTypes</key>
 			<array>
-				<string>air</string>
+				<string>com.dorma.air.qwe</string>
 			</array>
-			<key>CFBundleURLName</key>
-			<string>com.dorma.matrixair</string>
+		</dict>
+	</array>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeIdentifier</key>
+			<string>com.dorma.air.qwe</string>
+			<key>UTTypeDescription</key>
+			<string>Air Configuration</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<string>qwe</string>
+				<key>public.mime-type</key>
+				<string>application/airconfig</string>
+			</dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+			</array>
 		</dict>
 	</array>
 </dict>
