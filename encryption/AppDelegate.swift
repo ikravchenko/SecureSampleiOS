@@ -22,7 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         println("URL received:\(url)")
         if url.fileURL {
             let data = NSData(contentsOfURL: url)
-            UIAlertView(title: "File received", message: "Data: \(NSString(data: data!, encoding: NSUTF8StringEncoding)))", delegate: nil, cancelButtonTitle: "OK").show()
+            let password = SSKeychain.passwordForService(ServiceName, account: "main")
+            var content = NSString(data: data!, encoding:NSUTF8StringEncoding)
+            var arr = content?.componentsSeparatedByString(";") as [String]
+            let result = arr.map({ (el : String) -> String in
+                var decrypted = CypherHelper.decryptData(NSData(base64EncodedString: el, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters), password: password)
+                return NSString(data: decrypted, encoding: NSUTF8StringEncoding) as String
+            })
+            
+            UIAlertView(title: "File received", message: "Data: \(result)))", delegate: nil, cancelButtonTitle: "OK").show()
         }
         return true
     }
