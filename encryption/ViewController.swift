@@ -35,7 +35,7 @@ class ViewController: UIViewController, UIAlertViewDelegate {
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     super.prepareForSegue(segue, sender: sender)
-    (segue.destinationViewController as PhotosViewController).username = self.usernameField.text
+    (segue.destinationViewController as ContentViewController).username = self.usernameField.text
     self.passwordField.text = nil
   }
   

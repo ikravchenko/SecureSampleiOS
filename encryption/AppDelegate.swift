@@ -23,14 +23,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if url.fileURL {
             let data = NSData(contentsOfURL: url)
             let password = SSKeychain.passwordForService(ServiceName, account: "main")
-            var content = NSString(data: data!, encoding:NSUTF8StringEncoding)
-            var arr = content?.componentsSeparatedByString(";") as [String]
-            let result = arr.map({ (el : String) -> String in
-                var decrypted = CypherHelper.decryptData(NSData(base64EncodedString: el, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters), password: password)
-                return NSString(data: decrypted, encoding: NSUTF8StringEncoding) as String
-            })
-            
-            UIAlertView(title: "File received", message: "Data: \(result)))", delegate: nil, cancelButtonTitle: "OK").show()
+            var content = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            if let arr = content?.componentsSeparatedByString(";") as? [String] {
+                let result = arr.map({ (el : String) -> String in
+                    var decrypted = CypherHelper.decryptData(NSData(base64EncodedString: el, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters), password: password)
+                    if let d = decrypted {
+                        return NSString(data: decrypted, encoding: NSUTF8StringEncoding) as String
+                    } else {
+                        return ""
+                    }
+                })
+                UIAlertView(title: "File received", message: "Data: \(result)))", delegate: nil, cancelButtonTitle: "OK").show()
+            } else {
+                UIAlertView(title: "File received", message: "Cannot decrypt data", delegate: nil, cancelButtonTitle: "OK").show()
+            }
         }
         return true
     }

@@ -2,14 +2,14 @@
 platform :ios, "8.0"
 
 target "encryption" do
-	pod 'SSKeychain'
-	pod 'RNCryptor'
-  pod 'SSZipArchive'
+    pod 'SSKeychain'
+    pod 'RNCryptor'
+    pod 'SSZipArchive'
 end
 
 target "encryptionTests" do
-	pod 'SSKeychain'
-	pod 'RNCryptor'
-  pod 'SSZipArchive'
+    pod 'SSKeychain'
+    pod 'RNCryptor'
+    pod 'SSZipArchive'
 end
 

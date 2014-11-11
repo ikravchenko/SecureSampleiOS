@@ -3,10 +3,24 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "encryptionTests.encryptionTests.testExample (encryptionTests.encryptionTests)() -&gt; ():encryptionTests.swift">
+      </ContextState>
+      <ContextState
+         contextName = "encryption.ContentViewController.loadData (encryption.ContentViewController)() -&gt; ():ContentViewController.swift">
+      </ContextState>
+      <ContextState
          contextName = "encryptionTests.encryptionTests.testAES128Base64 (encryptionTests.encryptionTests)() -&gt; ():encryptionTests.swift">
       </ContextState>
       <ContextState
-         contextName = "encryptionTests.encryptionTests.testExample (encryptionTests.encryptionTests)() -&gt; ():encryptionTests.swift">
+         contextName = "encryption.AddEntryViewController.entryAdded (encryption.AddEntryViewController)(Swift.AnyObject) -&gt; ():AddEntryViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "encryption.ContentViewController.prepareForSegue (encryption.ContentViewController)(ObjectiveC.UIStoryboardSegue, sender : Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; ():ContentViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "((segue.destinationViewController as UINavigationController).childViewControllers[0] as AddEntryViewController)">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

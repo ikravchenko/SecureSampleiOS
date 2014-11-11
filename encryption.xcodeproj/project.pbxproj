@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B7334212B367427E89A8407A /* libPods-encryption.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E519699B5AD4F00B33B5E94 /* libPods-encryption.a */; };
-		CD0EDC2419F9103E00020B4F /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0EDC2319F9103E00020B4F /* PhotosViewController.swift */; };
-		CD0EDC2619F9108500020B4F /* PhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0EDC2519F9108500020B4F /* PhotoViewCell.swift */; };
+		CD0EDC2419F9103E00020B4F /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0EDC2319F9103E00020B4F /* ContentViewController.swift */; };
+		CD0EDC2619F9108500020B4F /* ContentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0EDC2519F9108500020B4F /* ContentViewCell.swift */; };
 		CD271EFC1A078C31003821CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9DA28F19F0FA4A00E81DB2 /* AppDelegate.swift */; };
 		CD271EFD1A078C31003821CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9DA29119F0FA4A00E81DB2 /* ViewController.swift */; };
-		CD271EFE1A078C31003821CA /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0EDC2319F9103E00020B4F /* PhotosViewController.swift */; };
-		CD271EFF1A078C31003821CA /* PhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0EDC2519F9108500020B4F /* PhotoViewCell.swift */; };
+		CD271EFE1A078C31003821CA /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0EDC2319F9103E00020B4F /* ContentViewController.swift */; };
+		CD271EFF1A078C31003821CA /* ContentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0EDC2519F9108500020B4F /* ContentViewCell.swift */; };
 		CD271F001A078C31003821CA /* CypherHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD40DB1A19FA8C5D00845F01 /* CypherHelper.m */; };
 		CD271F011A078C31003821CA /* CypherHelper.h in Sources */ = {isa = PBXBuildFile; fileRef = CD40DB1C19FA8C7900845F01 /* CypherHelper.h */; };
 		CD40DB1B19FA8C5D00845F01 /* CypherHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD40DB1A19FA8C5D00845F01 /* CypherHelper.m */; };
@@ -23,6 +23,10 @@
 		CD9DA29719F0FA4A00E81DB2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9DA29619F0FA4A00E81DB2 /* Images.xcassets */; };
 		CD9DA29A19F0FA4A00E81DB2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9DA29819F0FA4A00E81DB2 /* LaunchScreen.xib */; };
 		CD9DA2A619F0FA4A00E81DB2 /* encryptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9DA2A519F0FA4A00E81DB2 /* encryptionTests.swift */; };
+		CDE6FCB51A1108A200D21FB1 /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6FCB41A1108A200D21FB1 /* AddEntryViewController.swift */; };
+		CDE6FCB81A110DB200D21FB1 /* EntryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6FCB61A110CB500D21FB1 /* EntryDelegate.swift */; };
+		CDE6FCB91A1110FF00D21FB1 /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6FCB41A1108A200D21FB1 /* AddEntryViewController.swift */; };
+		CDE6FCBA1A1110FF00D21FB1 /* EntryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6FCB61A110CB500D21FB1 /* EntryDelegate.swift */; };
 		CDF26DDF19F8FAEF00E42808 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF26DDE19F8FAEF00E42808 /* Security.framework */; };
 		CDF26DE019F8FAF600E42808 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF26DDE19F8FAEF00E42808 /* Security.framework */; };
 		CDF26DE319F909E600E42808 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF26DE219F909E600E42808 /* MobileCoreServices.framework */; };
@@ -59,8 +63,8 @@
 		A68225384755157578D79D33 /* Pods-encryption.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encryption.debug.xcconfig"; path = "Pods/Target Support Files/Pods-encryption/Pods-encryption.debug.xcconfig"; sourceTree = "<group>"; };
 		ACA67965BA707E2DE5785ACC /* Pods-encryption.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encryption.release.xcconfig"; path = "Pods/Target Support Files/Pods-encryption/Pods-encryption.release.xcconfig"; sourceTree = "<group>"; };
 		AF6A52FC486347389B1E9863 /* libPods-encryptionTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-encryptionTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD0EDC2319F9103E00020B4F /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
-		CD0EDC2519F9108500020B4F /* PhotoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewCell.swift; sourceTree = "<group>"; };
+		CD0EDC2319F9103E00020B4F /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		CD0EDC2519F9108500020B4F /* ContentViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewCell.swift; sourceTree = "<group>"; };
 		CD0EDC2819F926BD00020B4F /* Sec-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sec-Bridging-Header.h"; sourceTree = "<group>"; };
 		CD40DB1A19FA8C5D00845F01 /* CypherHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CypherHelper.m; sourceTree = "<group>"; };
 		CD40DB1C19FA8C7900845F01 /* CypherHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CypherHelper.h; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 		CD9DA29F19F0FA4A00E81DB2 /* encryptionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = encryptionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9DA2A419F0FA4A00E81DB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD9DA2A519F0FA4A00E81DB2 /* encryptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = encryptionTests.swift; sourceTree = "<group>"; };
+		CDE6FCB41A1108A200D21FB1 /* AddEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEntryViewController.swift; sourceTree = "<group>"; };
+		CDE6FCB61A110CB500D21FB1 /* EntryDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDelegate.swift; sourceTree = "<group>"; };
 		CDF26DDE19F8FAEF00E42808 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CDF26DE219F909E600E42808 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D71FA1378D00AF045754CADC /* Pods-encryptionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encryptionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-encryptionTests/Pods-encryptionTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,10 +161,12 @@
 				CD9DA29619F0FA4A00E81DB2 /* Images.xcassets */,
 				CD9DA29819F0FA4A00E81DB2 /* LaunchScreen.xib */,
 				CD9DA28D19F0FA4A00E81DB2 /* Supporting Files */,
-				CD0EDC2319F9103E00020B4F /* PhotosViewController.swift */,
-				CD0EDC2519F9108500020B4F /* PhotoViewCell.swift */,
+				CD0EDC2319F9103E00020B4F /* ContentViewController.swift */,
+				CD0EDC2519F9108500020B4F /* ContentViewCell.swift */,
 				CD40DB1A19FA8C5D00845F01 /* CypherHelper.m */,
 				CD40DB1C19FA8C7900845F01 /* CypherHelper.h */,
+				CDE6FCB41A1108A200D21FB1 /* AddEntryViewController.swift */,
+				CDE6FCB61A110CB500D21FB1 /* EntryDelegate.swift */,
 			);
 			path = encryption;
 			sourceTree = "<group>";
@@ -362,10 +370,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD0EDC2419F9103E00020B4F /* PhotosViewController.swift in Sources */,
+				CD0EDC2419F9103E00020B4F /* ContentViewController.swift in Sources */,
 				CD9DA29219F0FA4A00E81DB2 /* ViewController.swift in Sources */,
 				CD9DA29019F0FA4A00E81DB2 /* AppDelegate.swift in Sources */,
-				CD0EDC2619F9108500020B4F /* PhotoViewCell.swift in Sources */,
+				CDE6FCB81A110DB200D21FB1 /* EntryDelegate.swift in Sources */,
+				CDE6FCB51A1108A200D21FB1 /* AddEntryViewController.swift in Sources */,
+				CD0EDC2619F9108500020B4F /* ContentViewCell.swift in Sources */,
 				CD40DB1B19FA8C5D00845F01 /* CypherHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,10 +384,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE6FCB91A1110FF00D21FB1 /* AddEntryViewController.swift in Sources */,
+				CDE6FCBA1A1110FF00D21FB1 /* EntryDelegate.swift in Sources */,
 				CD271EFC1A078C31003821CA /* AppDelegate.swift in Sources */,
 				CD271EFD1A078C31003821CA /* ViewController.swift in Sources */,
-				CD271EFE1A078C31003821CA /* PhotosViewController.swift in Sources */,
-				CD271EFF1A078C31003821CA /* PhotoViewCell.swift in Sources */,
+				CD271EFE1A078C31003821CA /* ContentViewController.swift in Sources */,
+				CD271EFF1A078C31003821CA /* ContentViewCell.swift in Sources */,
 				CD271F001A078C31003821CA /* CypherHelper.m in Sources */,
 				CD271F011A078C31003821CA /* CypherHelper.h in Sources */,
 				CD9DA2A619F0FA4A00E81DB2 /* encryptionTests.swift in Sources */,
