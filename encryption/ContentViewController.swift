@@ -4,7 +4,8 @@ import MessageUI
 class ContentViewController: UICollectionViewController, MFMailComposeViewControllerDelegate, EntryDelegate
 {
     var username : String!
-    var content = [String]()
+    var content = [(String, String)]()
+    
     lazy var filePath : String = {
         [unowned self] in
         var path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
@@ -31,22 +32,23 @@ class ContentViewController: UICollectionViewController, MFMailComposeViewContro
         }
     }
     
-    func encryptTextToFile(text: String, fileName: String) {
+    func encryptTextToFile(text: String, fileName: String) -> String {
         let data = NSData(bytes: [UInt8](text.utf8), length: countElements(text.utf8))
         var encrypted = CypherHelper.encryptData(data, password: SSKeychain.passwordForService(ServiceName, account: username))
         let base64edEncrypted = encrypted.base64EncodedDataWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
         base64edEncrypted.writeToFile(fileName, atomically: true)
+        return NSString(data: base64edEncrypted, encoding: NSUTF8StringEncoding) as String
     }
     
-    func decryptTextFromFile(fileName : String) -> String {
+    func decryptTextFromFile(fileName : String) -> (String, String) {
         if let contents = NSFileManager.defaultManager().contentsAtPath(fileName) {
             if let plainReadData = NSData(base64EncodedData: contents, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters) {
                 if let decryptedData = CypherHelper.decryptData(plainReadData, password: SSKeychain.passwordForService(ServiceName, account: username)) {
-                    return NSString(data: decryptedData, encoding: NSUTF8StringEncoding) as String
+                    return (NSString(data: decryptedData, encoding: NSUTF8StringEncoding) as String, NSString(data: plainReadData, encoding: NSUTF8StringEncoding) as String)
                 }
             }
         }
-        return ""
+        return ("", "")
     }
     
     func onEntryAdded(newEntry: String) {
@@ -54,8 +56,7 @@ class ContentViewController: UICollectionViewController, MFMailComposeViewContro
             UIAlertView(title: "Error", message: "Added text should not be empty", delegate: nil, cancelButtonTitle: "OK").show()
             return
         }
-        encryptTextToFile(newEntry, fileName: filePath.stringByAppendingPathComponent("enc-\(self.content.count).securedData"))
-        self.content.append(newEntry)
+        self.content.append(newEntry, encryptTextToFile(newEntry, fileName: filePath.stringByAppendingPathComponent("enc-\(self.content.count).securedData")))
         collectionView.reloadData()
     }
     
@@ -75,7 +76,7 @@ class ContentViewController: UICollectionViewController, MFMailComposeViewContro
         for f in contents {
             if f.hasSuffix(".securedData") {
                 let t = decryptTextFromFile(filePath.stringByAppendingPathComponent(f))
-                if !t.isEmpty {
+                if !t.0.isEmpty && !t.1.isEmpty {
                     self.content.append(t)
                 }
             } else {
@@ -90,7 +91,7 @@ class ContentViewController: UICollectionViewController, MFMailComposeViewContro
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("photo_cell", forIndexPath: indexPath) as ContentVIewCell
-        cell.textLabel.text = content[indexPath.row]
+        cell.textLabel.text = content[indexPath.row].0
         return cell
     }
     
@@ -106,11 +107,11 @@ class ContentViewController: UICollectionViewController, MFMailComposeViewContro
     }
     
     func createConfigData() -> NSData {
-        let result = content.reduce("", combine: { (res : String, el: String) -> String in
+        let result = content.reduce("", combine: { (res : String, el: (plain: String, cypher:  String)) -> String in
             if res.isEmpty {
-                return res + el
+                return res + el.cypher
             } else {
-                return res + ";" + el
+                return res + ";" + el.cypher
             }
         })
         return NSData(bytes: [UInt8](result.utf8), length: countElements(result.utf8))

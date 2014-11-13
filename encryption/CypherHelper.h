@@ -6,4 +6,5 @@
 @interface CypherHelper : NSObject
 + (NSData *)encryptData:(NSData *)data password:(NSString *)password;
 + (NSData *)decryptData:(NSData *)data password:(NSString *)password;
++ (NSString *)createSHA512:(NSString *)string;
 @end

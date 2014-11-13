@@ -99,7 +99,7 @@ class encryptionTests: XCTestCase {
     
     func testShouldEncodeDecodeData() {
         let content = "sample"
-        SSKeychain.setPassword("passwd", forService: ServiceName, account: "main")
+        SSKeychain.setPassword("qwerty", forService: ServiceName, account: "main")
         let data = NSData(bytes: [UInt8](content.utf8), length: countElements(content.utf8))
         var encrypted = CypherHelper.encryptData(data, password: SSKeychain.passwordForService(ServiceName, account: "main"))
         XCTAssertNotNil(encrypted)
@@ -113,6 +113,30 @@ class encryptionTests: XCTestCase {
         XCTAssertNotNil(decryptedData)
         let result = NSString(data: decryptedData, encoding: NSUTF8StringEncoding) as String
         XCTAssertEqual(content, result)
+    }
+    
+    func testSHA512() {
+        var sha512 = CypherHelper.createSHA512("content")
+        XCTAssertNotNil(sha512)
+        println(sha512)
+    }
+    
+    func testSHA512_32() {
+        var sha512 = CypherHelper.createSHA512("content")
+        for _ in 0...31 {
+            sha512 = CypherHelper.createSHA512(sha512)
+        }
+        XCTAssertNotNil(sha512)
+        println(sha512)
+    }
+    
+    func testSHA512_256() {
+        var sha512 = CypherHelper.createSHA512("content")
+        for _ in 0...255 {
+            sha512 = CypherHelper.createSHA512(sha512)
+        }
+        XCTAssertNotNil(sha512)
+        println(sha512)
     }
     
     override func tearDown() {
