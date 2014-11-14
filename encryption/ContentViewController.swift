@@ -44,7 +44,7 @@ class ContentViewController: UICollectionViewController, MFMailComposeViewContro
         if let contents = NSFileManager.defaultManager().contentsAtPath(fileName) {
             if let plainReadData = NSData(base64EncodedData: contents, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters) {
                 if let decryptedData = CypherHelper.decryptData(plainReadData, password: SSKeychain.passwordForService(ServiceName, account: username)) {
-                    return (NSString(data: decryptedData, encoding: NSUTF8StringEncoding) as String, NSString(data: plainReadData, encoding: NSUTF8StringEncoding) as String)
+                    return (NSString(data: decryptedData, encoding: NSUTF8StringEncoding) as String, plainReadData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength))
                 }
             }
         }
